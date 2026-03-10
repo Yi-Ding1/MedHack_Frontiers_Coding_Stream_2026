@@ -64,6 +64,25 @@ The raw data used in this solution comes from the **MedHack: Frontiers 2026** co
 
 If you are viewing this repository outside the official competition context, assume that you will **not** have direct access to these datasets and must obtain them via the official MedHack channels if eligible.
 
+### Environment setup
+
+- **Python version**: This project has been tested with **Python 3.10+**.
+- **Install dependencies from `requirements.txt` (CPU PyTorch by default)**:
+  - Create and activate a virtual environment (recommended).
+  - From the repository root (where `requirements.txt` lives), run:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+- **GPU-accelerated PyTorch (recommended)**:
+  - The command above will typically install the **CPU-only** build of PyTorch from PyPI.
+  - If you have a compatible NVIDIA GPU, install a **CUDA-enabled** PyTorch build that matches your GPU + driver/CUDA setup.
+  - Use the official installer selector at [PyTorch Get Started](https://pytorch.org/get-started/locally/) to choose the right CUDA version and the exact pip command for your machine.
+  - If you previously installed CPU-only PyTorch in the same environment, you may need to **remove the existing PyTorch packages first** before reinstalling the CUDA-enabled build.
+
+- **Key libraries**: The requirements file includes `numpy`, `pandas`, `torch`, `scikit-learn`, `matplotlib`, and `seaborn`, which cover all non-standard dependencies used in the notebooks.
+
 ### Getting started
 
 - **Review the data description**: Start with `data/README.txt` to understand the expected files and their purpose.
